@@ -1,0 +1,321 @@
+@import "vars"
+
+.main-top-block
+  position: relative
+  max-width: 1920px
+  margin: 0 auto
+
+  .main-top-head
+    position: absolute
+    top: 65px
+    left: 19.5%
+    z-index: 1
+    .text-big
+      color: $text-color
+      font-family: 'DIN Pro - Black'
+      font-size: 60px
+      font-weight: 400
+      line-height: 68px
+      margin-bottom: 35px
+
+    ul
+      list-style-type: none
+      margin: 0 0 0 25px
+      padding: 0
+
+      li
+        position: relative
+        padding: 3px 0 2px 20px
+        color: $text-color
+        font-size: 16px
+        font-weight: 700
+        line-height: 1.2
+
+        &:after
+          content: ''
+          position: absolute
+          left: 0
+          top: 10px
+          width: 10px
+          height: 10px
+          border-radius: 5px
+          background-color: $blue-color
+
+.main-search-wrapper
+  position: absolute
+  bottom: 90px
+  left: 0
+  right: 0
+
+.main-search
+  display: flex
+  padding: 8px
+  border-radius: 50px
+  background-color: $text-color
+
+
+  .btn-standart
+    font-size: 20px
+    height: 72px
+    width: 260px
+    margin-left: 5px
+
+  .v-select
+    font-size: 20px
+    font-weight: 700
+
+    &.input-where
+      width: calc(53% - 265px)
+      border-left: 1px solid $border-color
+
+      .dropdown-toggle
+        border-radius: 0 36px 36px 0
+
+        &:before
+          content: "\f3c5"
+
+    &.input-what
+      width: 47%
+
+      .dropdown-toggle
+        border-radius: 36px 0 0 36px
+
+        &:before
+          top: 18px
+          content: "\f129"
+
+    &.open
+      &.input-what
+        .dropdown-toggle
+          border-radius: 36px 0 0 0
+
+      &.input-where
+        .dropdown-toggle
+          border-radius: 0 36px 0 0
+
+    .selected-tag
+      color: $text-color
+      line-height: 70px
+      height: 100%
+      margin: 0
+      pointer-events: none
+
+
+    .dropdown-toggle
+      position: relative
+      height: 100%
+      padding-left: 70px
+      background-color: #fff
+      border: none
+      overflow: hidden
+
+      &:before
+        position: absolute
+        left: 30px
+        top: 20px
+        font-family: Font Awesome\ 5 Free
+        color: $green-color
+        font-size: 24px
+        z-index: 1
+
+      .clear
+        display: none
+
+    input[type=search]
+      height: 100%
+      color: $text-color
+      font-size: 20px
+      font-weight: 700
+      background-color: #fff
+      border: none
+
+      &::-webkit-input-placeholder
+        color: $text-color
+
+      &::-moz-placeholder
+        color: $text-color
+
+      &:-ms-input-placeholder
+        color: $text-color
+
+      &:-moz-placeholder
+        color: $text-color
+
+    .open-indicator
+      right: 28px
+      bottom: 21px
+
+      &:before
+        transform: rotate(133deg)
+        border-color: $text-color
+
+    .dropdown-menu
+      box-shadow: 0 5px 50px rgba(50, 50, 50, 0.05)
+      border: 1px solid $border-color
+      border-radius: 0 0 10px 10px
+      padding: 0
+
+      li
+        color: $text-color
+        font-size: 20px
+        font-weight: 700
+        line-height: 72px
+        padding-top: 0
+        padding-bottom: 0
+
+        &.active
+          a
+            background-color: $blue-color
+            color: #fff
+
+        &:hover,
+        &.highlight
+          a
+            background-color: $green-color
+            color: #fff
+
+        a
+          padding-left: 32px
+          transition: all .2s
+          color: $text-color
+
+        .fas
+          margin-right: 27px
+
+
+
+@media (max-width: 1199px)
+  .main-search-wrapper
+    bottom: -63px
+
+  .main-search
+    flex-wrap: wrap
+
+    .v-select
+      height: 52px
+      margin-bottom: 8px
+
+      &.input-where
+        width: 50%
+
+        .dropdown-toggle
+          border-radius: 0 40px 5px 0
+
+      &.input-what
+        width: 50%
+
+        .dropdown-toggle
+          border-radius: 40px 0 0 5px
+
+          &:before
+            top: 8px
+
+      &.open
+        &.input-what
+          .dropdown-toggle
+            border-radius: 40px 0 0 0
+
+        &.input-where
+          .dropdown-toggle
+            border-radius: 0 40px 0 0
+
+      .dropdown-toggle:before
+        top: 9px
+
+      .open-indicator
+        bottom: 11px
+
+      .selected-tag
+        line-height: 52px
+
+    .btn-standart
+      height: 52px
+      width: 100%
+      border-radius: 5px 5px 40px 40px
+      margin: 0
+
+    .dropdown-menu
+      li
+        line-height: 52px
+
+
+  .main-top-block
+    .main-top-head
+      top: 32px
+
+      .text-big
+        font-size: 35px
+        line-height: 35px
+        margin-bottom: 20px
+
+
+@media (max-width: 767px)
+  .main-search-wrapper
+    bottom: -91px
+
+    .container
+      max-width: 100%
+
+  .main-search
+    .v-select
+      height: 52px
+      margin-bottom: 8px
+
+      &.input-where
+        width: 100%
+        border: none
+
+        .dropdown-toggle
+          border-radius: 5px
+
+      &.input-what
+        width: 100%
+
+        .dropdown-toggle
+          border-radius: 40px 40px 5px 5px
+
+          &:before
+            top: 8px
+
+      &.open
+        &.input-what
+          .dropdown-toggle
+            border-radius: 40px 40px 0 0
+
+        &.input-where
+          .dropdown-toggle
+            border-radius: 5px 5px 0 0
+
+  .main-top-block
+    .main-top-head
+      position: relative
+      top: 0
+      left: 0
+      margin: 10px 0 0
+      padding-left: 15px
+      padding-right: 15px
+
+      .text-big
+        max-width: 670px
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+
+        br
+          display: none
+
+    ul
+      display: none
+
+
+@media (max-width: 575px)
+  .main-search-wrapper
+    position: static
+    margin-top: 15px
+
+  .main-top-block
+    .main-top-head
+      .text-big
+        font-size: 24px
+        line-height: 27px
+        margin-bottom: 17px

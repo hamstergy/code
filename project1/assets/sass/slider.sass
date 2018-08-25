@@ -1,0 +1,64 @@
+@import "vars"
+
+.carousel
+  border-bottom: 1px solid $border-color
+
+  @media (max-width: 1199px)
+    margin-bottom: 120px
+
+  @media (max-width: 575px)
+    margin-bottom: 0
+
+.carousel-item
+  height: 550px
+  background-repeat: no-repeat
+  background-position: right center
+  background-size: cover
+  outline: none
+
+  @media (max-width: 1199px)
+    height: 330px
+
+  @media (max-width: 767px)
+    height: 50vw
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon
+  width: 70px
+  height: 70px
+  border-radius: 50%
+  background-color: $green-color
+  background-size: 15px 24px
+  transition: background-color .2s
+
+.carousel-control-prev-icon
+  background-image: url('/img/icons/arrow-left.svg')
+  background-position: left 25px center
+
+
+.carousel-control-next-icon
+  background-image: url('/img/icons/arrow-right.svg')
+  background-position: right 25px center
+
+
+.carousel-control-next,
+.carousel-control-prev
+  opacity: 1 !important
+
+  &:hover
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon
+      background-color: $blue-color
+
+@media (max-width: 575px)
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon
+    width: 48px
+    height: 48px
+    background-size: 10px
+
+  .carousel-control-prev-icon
+    background-position: left 17px center
+
+  .carousel-control-next-icon
+    background-position: right 17px center

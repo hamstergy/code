@@ -1,0 +1,96 @@
+@import "vars"
+
+header
+  background-color: $bg-color
+
+  .navbar-dark .navbar-toggler
+    outline: none
+    transition: border-color .2s
+
+    &:hover,
+    &:active
+      border: 1px solid $blue-color
+
+  .dropdown-menu
+    left: 1rem
+    margin-top: 15px
+    box-shadow: 0 5px 50px rgba(50, 50, 50, 0.05)
+    border: 1px solid $border-color
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      left: 25px
+      background-color: #fff
+      z-index: 0
+      pointer-events: none
+
+    &:before
+      top: -8px
+      width: 16px
+      height: 16px
+      border: 1px solid $border-color
+      transform: rotate(45deg)
+
+    &:after
+      width: 23px
+      height: 12px
+      top: -1px
+      left: 21px
+
+    .dropdown-item
+      position: relative
+      z-index: 1
+
+  nav
+    min-height: 96px
+    padding-left: 0
+    padding-right: 0
+    background-color: $bg-color
+
+    @media (max-width: 991px)
+      min-height: 0
+
+    .nav-link
+      span
+        vertical-align: middle
+
+      .fa-user-alt
+        margin-right: 10px
+        font-size: 12px
+
+    .nav-item.user
+      white-space: nowrap
+
+      .nav-link
+        padding-right: 0
+
+      span
+        max-width: 145px
+        text-overflow: ellipsis
+        overflow: hidden
+        display: inline-block
+        vertical-align: middle
+
+
+  a
+    opacity: 1
+    transition: opacity .2s
+
+    &:hover
+      opacity: .8
+
+  .lang
+    .dropdown-item
+      img,
+      span
+        vertical-align: middle
+
+      img
+        margin-right: 10px
+        border: 1px solid transparent
+        border-radius: 2px
+
+        &.ru
+          border: 1px solid $border-color

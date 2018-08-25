@@ -1,0 +1,117 @@
+@import "vars"
+
+
+
+// ---------------------------------  < 1200
+
+@media (max-width: 1199px)
+  .top-nav .multi-col-3 .dropdown-menu
+    min-width: 540px !important
+
+  footer
+    padding: 50px 0
+
+
+
+// ---------------------------------  < 992
+
+@media (max-width: 991px)
+  header
+    .navbar-brand
+      margin-right: 0
+
+    img.devider
+      display: none
+
+    .dropdown-menu
+      margin-top: 0
+      background: transparent
+      border: none
+
+      &:before,
+      &:after
+        content: none
+
+      .dropdown-item
+        color: $text-color-light
+
+    nav .nav-item.user span
+      max-width: 100%
+
+    .lang .dropdown-item img.ru
+      border-color: transparent
+
+    .dropdown-toggle i.fas
+      position: static
+      vertical-align: middle
+      margin-left: 10px
+
+  .feedback-card
+    margin-bottom: 45px
+
+    .fb-card-header
+      margin-bottom: 25px
+
+  footer
+    padding-bottom: 25px
+
+
+
+// ---------------------------------  < 768
+
+@media (max-width: 767px)
+
+  .info-block
+    padding: 2rem 0
+
+  .cases-block
+    .container
+      max-width: 100%
+
+  .case
+    margin-bottom: 15px
+
+  .footer-col
+    width: 50%
+    padding-right: 10px
+
+
+
+// ---------------------------------  < 576
+
+@media (max-width: 575px)
+  .block-head
+    margin: 45px 0 60px
+    font-size: 35px
+
+
+
+// ---------------------------------  < 360
+
+@media (max-width: 359px)
+  .navbar-brand img
+    max-width: 200px
+
+
+
+// ---------------------------------  > 992
+
+@media (min-width: 992px)
+  .container
+    max-width: 100%
+
+  .navbar-expand-lg .navbar-nav .nav-link
+    padding-right: .5rem;
+    padding-left: .5rem;
+
+
+
+// ---------------------------------  > 1200
+
+@media (min-width: 1200px)
+  .container
+    max-width: $min-container-width
+
+  .navbar-expand-lg .navbar-nav .nav-link
+    padding-right: 1rem;
+    padding-left: 1rem;

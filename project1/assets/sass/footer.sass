@@ -1,0 +1,123 @@
+@import "vars"
+
+.footer-wrapper
+  margin-top: 60px
+
+.footer-info-header
+  padding: 30px
+  border: 1px solid $border-color
+  border-bottom: none
+  border-radius: .7rem .7rem 0 0
+  background-color: $white-color
+
+  .small-title.lined
+    margin: 0
+    color: $text-color
+    font-family: 'DIN Pro - Black'
+    font-size: 1.5rem
+    font-weight: 400
+
+    &:after
+      background-color: $blue-color
+
+.footer-info
+  padding-bottom: 95px
+  border-top: 1px solid $border-color
+  background-color: $text-color-light
+
+  .footer-info-body
+    border: 1px solid $border-color
+    border-top: none
+    border-radius: 0 0 .7rem .7rem
+    background-color: $white-color
+
+    .logo-holder
+      padding: 22px 60px 30px 30px
+
+      img
+        max-width: 310px
+
+    .info-holder
+      padding: 17px 30px 30px
+      border-left: 1px solid $border-color
+
+
+footer
+  padding: 70px 130px
+
+  a:not(.logo)
+    color: $text-color-soft
+    text-decoration: none
+    transition: color .2s
+
+    &:hover
+      color: $blue-color
+
+  .footer-col:not(:first-child)
+    margin-top: 10px
+
+  .logo
+    display: inline-block
+    margin-bottom: 35px
+    opacity: 1
+    transition: opacity .2s
+
+    &:hover
+      opacity: .8
+
+  .policy-link
+    display: inline-block
+    margin-top: 20px
+    text-decoration: underline !important
+
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+    li
+      a
+        display: inline-block
+        padding: 4px 0
+
+  .small-title.lined
+    font-size: 1rem
+
+    &:after
+      background-color: $blue-color !important
+
+  .contacts
+    font-size: 0
+
+    a
+      display: inline-block
+      margin-right: 20px
+
+    img
+      width: 25px
+
+
+
+@media (max-width: 991px)
+  .footer-info
+    .footer-info-body
+
+      .logo-holder
+        width: 100%
+        padding-right: 30px
+
+        img
+          max-width: 100%
+
+      .info-holder
+        border-left: none
+        border-top: 1px solid $border-color
+
+  .footer-col
+    margin-bottom: 25px
+
+    &:first-child
+      width: 100%
+
+  footer .policy-link br
+    display: none
